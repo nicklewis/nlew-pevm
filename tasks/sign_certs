@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/opt/puppetlabs/bin/puppet cert sign $(echo "${PT_certnames?}" | tr -d "[]'\"" | tr ',' ' ')

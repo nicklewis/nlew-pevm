@@ -12,7 +12,7 @@ plan pevm(
   run_command("cd puppet-enterprise-* && sed -e 's/.*console_admin_password.*/\"console_admin_password\": \"${password}\"/' conf.d/pe.conf > conf.d/custom-pe.conf", $master)
   run_command("cd puppet-enterprise-* && ./puppet-enterprise-installer -c conf.d/custom-pe.conf", $master)
 
-  run_task(puppet::agent, $master)
+  run_task(pevm::run_agent, $master)
 
   # XXX This should be a task
   run_command("echo ${password} | /opt/puppetlabs/bin/puppet-access login admin --lifetime 7d", $master)

@@ -1,0 +1,9 @@
+{
+  "description": "Installs puppet agent on the node using the frictionless agent installer",
+  "parameters": {
+    "master": {
+      "description": "The master to download the installer from",
+      "type": "String[1]"
+    }
+  }
+}

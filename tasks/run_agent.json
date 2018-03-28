@@ -1,0 +1,4 @@
+{
+  "description": "Run puppet agent in enforcement mode",
+  "parameters": {}
+}

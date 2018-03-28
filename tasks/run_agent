@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/opt/puppetlabs/bin/puppet agent --verbose --onetime --no-daemonize --no-use_cached_catalog --no-usecacheonfailure

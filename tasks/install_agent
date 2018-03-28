@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+curl -skL https://${PT_master?}:8140/packages/current/install.bash | bash

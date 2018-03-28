@@ -1,0 +1,9 @@
+{
+  "description": "Sign certs for a list of nodes",
+  "parameters": {
+    "certnames": {
+      "description": "The list of certs to sign",
+      "type": "Array[String[1]]"
+    }
+  }
+}

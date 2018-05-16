@@ -5,11 +5,11 @@ plan pevm::addnodes(
 ) {
   $agents = floaty::get($platform, $count)
 
-  run_task(pevm::install_agent, $agents, {master => $master})
+  run_task(pevm::install_agent, $agents, "install puppet-agent on agent nodes", {master => $master})
 
-  run_task(pevm::sign_certs, $master, {certnames => $agents})
+  run_task(pevm::sign_certs, $master, "sign agent certificates", {certnames => $agents})
 
-  run_task(pevm::run_agent, $agents)
+  run_task(pevm::run_agent, $agents, "run puppet on agents to setup pxp-agent")
 
   $agents
 }

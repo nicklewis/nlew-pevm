@@ -3,7 +3,7 @@
   "parameters": {
     "certnames": {
       "description": "The list of certs to sign",
-      "type": "Array[String[1]]"
+      "type": "Variant[Array[String[1]], String[1]]"
     }
   }
 }

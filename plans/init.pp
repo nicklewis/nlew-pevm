@@ -1,6 +1,6 @@
 # Installs PE on a vmpooler VM
 plan pevm(
-  String $version = '2018.1',
+  String $version = '2019.1',
   String $password = 'istrator',
   Integer $agents = 0
 ) {

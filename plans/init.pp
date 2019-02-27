@@ -7,6 +7,7 @@ plan pevm(
   $platform = 'centos-7-x86_64'
 
   $master = floaty::get($platform)
+  run_command("floaty modify ${master} --tags '{\"pevm\": \"master\"}'", localhost)
 
   # XXX This should all be one task and/or plan
   run_command("curl -skL getpe.delivery.puppetlabs.net/latest/${version}/el-7-x86_64 | tar xf -", $master, "download the PE VM")

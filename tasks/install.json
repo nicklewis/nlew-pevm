@@ -1,0 +1,15 @@
+{
+  "description": "Install Puppet Enterprise",
+  "input_method": "environment",
+  "parameters": {
+    "version": {
+      "type": "String",
+      "default": "latest",
+      "description": "The version to install or 'latest' to install the latest"
+    },
+    "password": {
+      "type": "String",
+      "description": "The console admin password to set"
+    }
+  }
+}

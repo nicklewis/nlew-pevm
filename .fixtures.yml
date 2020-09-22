@@ -3,4 +3,5 @@
 ---
 fixtures:
   forge_modules:
+    floaty: "nlew/floaty"
 #     stdlib: "puppetlabs/stdlib"

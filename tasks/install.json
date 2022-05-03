@@ -10,6 +10,15 @@
     "password": {
       "type": "String",
       "description": "The console admin password to set"
+    },
+    "code_manager": {
+      "type": "Boolean",
+      "description": "Whether to enable code manager",
+      "default": false
+    },
+    "control_repo": {
+      "type": "Optional[String]",
+      "description": "The git remote to use as the control repo"
     }
   }
 }

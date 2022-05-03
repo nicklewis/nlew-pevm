@@ -1,5 +1,5 @@
 plan pevm::addnodes(
-  String $master,
+  String $master = 'master',
   String $platform = 'centos-7-x86_64',
   Integer[1] $count = 2,
 ) {

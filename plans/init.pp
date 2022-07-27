@@ -15,7 +15,7 @@ plan pevm(
   $master = get_target('master')
   $platform = 'centos-7-x86_64'
 
-  run_task('pevm::install', $master, "install PE", password => $password, code_manager => $code_manager, control_repo => $control_repo)
+  run_task('pevm::install', $master, "install PE", code_manager => $code_manager, control_repo => $control_repo)
 
   # This has to happen *after* installing, otherwise the pe-puppet user doesn't
   # exist yet
@@ -28,6 +28,7 @@ plan pevm(
   run_task(pevm::run_agent, $master, "run puppet on the master to finish the setup")
 
   # XXX This should be a task
+  run_command("puppet infra console_password --password ${password}", $master, "set console password")
   run_command("echo ${password} | /opt/puppetlabs/bin/puppet-access login admin --lifetime 7d", $master, "create RBAC token")
 
   if $agents > 0 {
